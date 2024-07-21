@@ -4,6 +4,7 @@
 </template>
 
 <script setup lang="ts">
+import actions from '~/actions';
 import auth from '~/middleware/auth';
 
 definePageMeta({
@@ -11,10 +12,8 @@ definePageMeta({
   middleware: auth
 })
 
-const authStore = useAuthStore();
-
 const handleLogout = async () => {
-  await authStore.logout();
+  await actions.auth.logout();
   navigateTo('/login');
 }
 

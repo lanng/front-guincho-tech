@@ -1,24 +1,21 @@
 <script lang="ts" setup>
+import actions from '~/actions';
+import type { LoginForm } from '~/actions/auth/login';
 import guest from '~/middleware/guest';
-import { useAuthStore } from '~/stores/useAuthStore';
 
 definePageMeta({ layout: 'guest', middleware: guest });
 
-const authStore = useAuthStore();
 
-const form = ref({
+const form = ref<LoginForm>({
   email: 'test@example.com',
   password: 'password',
 });
 
 const handleLogin = async () => {
-  await authStore.login(form.value);
+  await actions.auth.login(form.value);
   navigateTo('/');
 }
 
-const getUser = async () => {
-  console.log(authStore.user)
-}
 </script>
 
 <template>
@@ -45,7 +42,6 @@ const getUser = async () => {
           </button>
         </div>
       </form>
-      <button class="btn btn-secondary" @click="getUser">User</button>
     </div>
   </body>
 </template>
