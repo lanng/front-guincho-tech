@@ -1,6 +1,5 @@
 <template>
-  <div class="text-blue-400">Autenticado!</div>
-  <button class="btn btn-info" @click="handleLogout">Sair</button>
+  <div class="flex justify-center text-black">Autenticado!</div>
 </template>
 
 <script setup lang="ts">
@@ -11,11 +10,6 @@ definePageMeta({
   layout: 'default',
   middleware: auth
 })
-
-const handleLogout = async () => {
-  await actions.auth.logout();
-  navigateTo('/login');
-}
 
 </script>
 

@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <ul>
-      <li>
-        <NuxtLink href="/login" class="link-primary">Login</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink href="/register" class="link-primary">Register</NuxtLink>
-      </li>
-    </ul>
+
+  <head>
+    <title>Login</title>
+  </head>
+  <div class="navbar bg-base-200">
+    <div class="text-lg font-bold">🚚Guincho Tech</div>
   </div>
   <slot />
 

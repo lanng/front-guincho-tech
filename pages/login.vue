@@ -30,12 +30,12 @@ const handleLogin = async () => {
             required>
         </div>
         <div class="mb-4">
-          <label for="password" class="block mb-2 text-sm font-bold text-gray-700">Password</label>
+          <label for="password" class="block mb-2 text-sm font-bold text-gray-700">Senha</label>
           <input v-model="form.password" type="password" id="password" name="password"
             class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
             required>
         </div>
-        <div class="flex items-center justify-between">
+        <div class="flex justify-end">
           <button type="submit"
             class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">
             Entrar
