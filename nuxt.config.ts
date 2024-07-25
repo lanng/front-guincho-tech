@@ -4,4 +4,9 @@ export default defineNuxtConfig({
 	ssr: false,
 	devtools: { enabled: true },
 	modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+	runtimeConfig: {
+		public: {
+			apiBaseUrl: process.env.API_BASE_URL,
+		},
+	},
 });
