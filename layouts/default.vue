@@ -12,12 +12,24 @@
           </svg>
         </button>
         <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-          <li><a>Link1</a></li>
-          <li><a>Link 2</a></li>
-          <li><a>etc...</a></li>
-          <li><a>etc...</a></li>
-          <li><a>etc...</a></li>
-          <li><a>etc...</a></li>
+          <li>
+            <NuxtLink to="/company">Empresas</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/driver">Motoristas</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">Seguradoras</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">Placas</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">Notas Fiscais</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="">Serviços</NuxtLink>
+          </li>
         </ul>
       </div>
     </div>

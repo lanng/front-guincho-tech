@@ -3,7 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import actions from '~/actions';
 import auth from '~/middleware/auth';
 
 definePageMeta({

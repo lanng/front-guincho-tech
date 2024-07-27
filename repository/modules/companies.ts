@@ -3,7 +3,7 @@ import type { AsyncDataOptions } from "#app";
 
 import FetchFactory from "../factory";
 
-type ICompany = {
+export type ICompany = {
 	id: number;
 	name: string;
 };
@@ -42,6 +42,7 @@ class CompaniesModule extends FetchFactory<ICompany[]> {
 
 	async updateCompany(
 		body: object,
+		id: number,
 		asyncDataOptions?: AsyncDataOptions<ICompany[]>
 	) {
 		return useAsyncData(() => {
@@ -52,7 +53,7 @@ class CompaniesModule extends FetchFactory<ICompany[]> {
 					"Content-Type": "application/json",
 				},
 			};
-			return this.call("PUT", `${this.RESOURCE}`, body, fetchOptions);
+			return this.call("PATCH", `${this.RESOURCE}/${id}`, body, fetchOptions);
 		}, asyncDataOptions);
 	}
 
