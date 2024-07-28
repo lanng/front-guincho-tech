@@ -41,8 +41,8 @@ class CompaniesModule extends FetchFactory<ICompany[]> {
 	}
 
 	async updateCompany(
-		body: object,
 		id: number,
+		body: object,
 		asyncDataOptions?: AsyncDataOptions<ICompany[]>
 	) {
 		return useAsyncData(() => {

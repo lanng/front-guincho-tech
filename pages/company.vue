@@ -6,7 +6,7 @@
         <tr>
           <th id="id">ID</th>
           <th id="name">Nome da empresa</th>
-          <th scope="options" colspan="2">Opções</th>
+          <th scope="col" colspan="2">Opções</th>
         </tr>
       </thead>
       <tbody>
@@ -85,7 +85,7 @@ const openModal = (companyData: ICompany) => {
 }
 
 const handleUpdate = async (updatedCompany: ICompany) => {
-  const log = await $api.companies.updateCompany(updatedCompany, updatedCompany.id);
+  const log = await $api.companies.updateCompany(updatedCompany.id, updatedCompany);
   console.log(log);
   refresh();
   const modal = document.getElementById('editCompany') as HTMLDialogElement;
