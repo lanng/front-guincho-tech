@@ -19,7 +19,7 @@
             <NuxtLink to="/driver">Motoristas</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="">Seguradoras</NuxtLink>
+            <NuxtLink to="/insurance">Seguradoras</NuxtLink>
           </li>
           <li>
             <NuxtLink to="/plate">Placas</NuxtLink>
