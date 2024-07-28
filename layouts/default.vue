@@ -22,7 +22,7 @@
             <NuxtLink to="">Seguradoras</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="">Placas</NuxtLink>
+            <NuxtLink to="/plate">Placas</NuxtLink>
           </li>
           <li>
             <NuxtLink to="">Notas Fiscais</NuxtLink>
