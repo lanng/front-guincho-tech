@@ -8,13 +8,14 @@ export type IDriver = {
 	name: string;
 };
 
-class DriversModule extends FetchFactory<IDriver> {
-	private RESOURCE = "api/drivers";
+class DriversModule extends FetchFactory<IDriver[]> {
+	private RESOURCE = "/api/drivers";
 
 	async getDrivers(asyncDataOptions?: AsyncDataOptions<IDriver[]>) {
 		return useAsyncData(() => {
 			const fetchOptions: FetchOptions<"json"> = {
 				headers: {
+					"Accept-Language": "en-US",
 					Accept: "application/json",
 					"Content-Type": "application/json",
 				},
@@ -30,6 +31,7 @@ class DriversModule extends FetchFactory<IDriver> {
 		return useAsyncData(() => {
 			const fetchOptions: FetchOptions<"json"> = {
 				headers: {
+					"Accept-Language": "en-US",
 					Accept: "application/json",
 					"Content-Type": "application/json",
 				},
@@ -46,6 +48,7 @@ class DriversModule extends FetchFactory<IDriver> {
 		return useAsyncData(() => {
 			const fetchOptions: FetchOptions<"json"> = {
 				headers: {
+					"Accept-Language": "en-US",
 					Accept: "application/json",
 					"Content-Type": "application/json",
 				},
@@ -61,6 +64,7 @@ class DriversModule extends FetchFactory<IDriver> {
 		return useAsyncData(() => {
 			const fetchOptions: FetchOptions<"json"> = {
 				headers: {
+					"Accept-Language": "en-US",
 					Accept: "application/json",
 					"Content-Type": "application/json",
 				},
